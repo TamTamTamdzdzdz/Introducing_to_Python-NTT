@@ -1,37 +1,7 @@
 from shutil import copyfile
 import pickle
 
-# student_info = [{
-#     'id': 20200000,
-#     'name': 'Nguyen Van A',
-#     'score': {
-#         'math': 7.8,
-#         'english': 8.9,
-#         'physics': 9.0,
-#     }
-# },
-#     {
-#         'id': 20200001,
-#         'name': 'Le Van B',
-#         'score': {
-#             'math': 9.8,
-#             'english': 8.7,
-#             'physics': 7.6,
-#         }
-#     }
-# ]
-# with open('student_info.pkl','wb') as temp:
-#     pickle.dump(student_info,temp)
-with open('student_info.pkl','rb') as temp:
-    myfile=pickle.load(temp)
-    print(myfile)
-temp.close()
-with open('updated_info.pkl','rb') as my_updated:
-    print(pickle.load(my_updated))
-
-
 copyfile('student_info.pkl', 'updated_info.pkl')
-
 def add_student_info(new_student:dict):
     lmao=True
     with open('updated_info.pkl', 'rb') as file:
